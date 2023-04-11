@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="dis"></h1>
+    <!-- <button onclick="years()">YEARS</button> -->
+    <button onclick="datetest()">DATE</button>
+    <button onclick="monthe()">MONTH</button>
+    <button onclick="houres()">HOUR</button>
+    <button onclick="alldate()">Dayandtime</button>
+</body>
+<script>
+   var date=new Date();
+    function datetest()
+    {
+       
+        alert(date.getDay())
+        document.getElementById('dis').innerHTML=date.getDay();
+    }
+    function monthe()
+    {
+       
+        document.getElementById('dis').innerHTML=date.getMonth();
+    }
+    function houres()
+    {
+        document.getElementById('dis').innerHTML=date.getHours();
+    }
+    function alldate(){
+        document.getElementById('dis').innerHTML=Date();
+    }
+</script>
+</html>

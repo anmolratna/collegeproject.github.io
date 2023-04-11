@@ -1,1 +1,1 @@
-# collegeproject.github.io
+# collegemanagement.github.io

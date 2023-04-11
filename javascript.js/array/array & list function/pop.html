@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+
+
+    </h1>
+    <button onclick="pop()"> click</button>
+    <button onclick="push()">push</button>
+    <button onclick="slice()">slice</button>
+</body>
+<script>
+    var fruits=["banana","papaya","cucumber","litchi"];
+    var demo=fruits;
+    document.getElementById("res").innerHTML=demo;
+   
+    function pop()
+    {
+      demo.pop();
+      document.getElementById("res").innerHTML=demo;
+    }
+    function push()
+    {   var x=prompt("please enter the value");
+        var x=x.split(",");
+        demo.push(x);
+        document.getElementById("res").innerHTML=demo;
+    }
+    function slice()
+    {
+        var x = prompt("please enter the number of the slicing element");
+        var y=demo.slice(x);
+        document.getElementById("res").innerHTML=y;
+        
+        
+        }
+</script>
+</html>

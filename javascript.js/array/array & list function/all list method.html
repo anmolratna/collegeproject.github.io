@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res1"></h1>
+    <button onclick="pop()">POP</button>
+    <h1 id="res2"></h1>
+    <button onclick="push()">PUSH</button>
+    <h1 id="rev"></h1>
+    <button onclick="res()">REVERSE</button>
+    <h1 id="shif">
+    </h1>
+    <button onclick="shift()">SHIFT</button>
+    <h1 id="sli"></h1>
+    <button onclick="slice()">SLICE</button>
+    
+</body>
+<script>
+    var fruits=["mango","banana","Apple","pineapple"];
+    var demo=fruits;
+    var res2=fruits;
+    var rev=fruits;
+    var demo2=fruits;
+    var demo3=fruits;
+   document.getElementById('res1').innerHTML=demo;
+    function pop()
+    {
+        demo.pop();
+        document.getElementById('res1').innerHTML=demo;
+    }
+    document.getElementById('res2').innerHTML=res2;
+    function push(){
+      
+      var x=prompt("enter the push element");
+      var x=x.split(",");
+      res2.push(x)
+      document.getElementById('res2').innerHTML=res2;
+    }
+    document.getElementById('rev').innerHTML=rev;
+    function res(){
+        demo.reverse();
+        document.getElementById('rev').innerHTML=rev;
+
+    }
+    document.getElementById('shif').innerHTML=demo2;
+    function shift(){
+       demo2.shift();
+       document.getElementById('shif').innerHTML=demo2;
+
+    }
+    document.getElementById('sli').innerHTML=demo3;
+    function slice()
+    {
+        var n=prompt("enter the slice interger");
+        var final=demo3.slice(n);
+        document.getElementById('sli').innerHTML=final;
+    }
+
+    
+</script>
+</html>

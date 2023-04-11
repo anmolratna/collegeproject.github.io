@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="box1">
+        here
+    </p>
+    <p id="box2">
+
+    </p>
+        
+
+    
+</body>
+<script>
+   let text = ["banana","cucumber","papaya","litchi"]
+   let result = text.valueOf();
+   document.getElementById("box1").innerHTML=result;
+   
+   let fruits=["banana","papaya","cucumber","litchi"];
+   let solution=fruits.join(" ! ");
+   // simpaly join() is include ! between every element in array;
+   document.getElementById("box2").innerHTML=solution;
+
+
+</script>
+</html>

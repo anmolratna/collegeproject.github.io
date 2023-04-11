@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(42, 107, 107);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #first{
+            background-color: rgb(146, 153, 150);
+            border: 10px;
+            height: 15vhvh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border: 5px solid rgb(211, 208, 208);
+            border-radius: 200px;
+            flex-direction: column-reverse;
+            margin-left: 200px;
+        }
+        #second{
+            background-color: rgb(132, 136, 134);
+            height: 5vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border: 5px solid rgb(195, 189, 189);
+            border-radius: 10px;
+            flex-direction: column-reverse;
+            margin-left: 200px;
+        }
+        #res{
+            background-color: rgb(199, 203, 209);
+            height: 15vh;
+            width: 50%;
+            border: 5px solid rgb(172, 164, 169);
+            border-radius: 10px;
+            margin: 150px;
+            margin-bottom: 50px;
+        }
+        .button{
+            background-color: rgb(192, 200, 209);
+        }
+        #ope{
+            background-color: beige;
+            height: 5vh;
+            width: 20%;
+            margin-left: 200px;
+        }
+    </style>
+    <input type="number" name="first" id="first" step="any"/>
+    <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    
+    <input type="number" name="second" id="second" step="any"/>
+    <br/>
+    <br/>
+    <button style="background-color: rgb(133, 40, 87); margin-left: 200px;" onclick="cal()">calculate</button>
+    <br/>
+    <input type="text" name="" id="res" readonly=""/>
+</body>
+<script type="text/javascript">
+    function cal(){
+      var opr1=document.getElementById('first').value;
+      var opr2=document.getElementById('second').value;
+      var ope=document.getElementById('ope').value;
+      if(ope=='+')
+      {
+        var res=parseInt(opr1)+parseInt(opr2);
+
+      }
+      if(ope=='-')
+      {
+        var res=parseInt(opr1)-parseInt(opr2);
+
+      }
+      if(ope=='*')
+      {
+        var res=parseInt(opr1)*parseInt(opr2);
+
+      }
+      if(ope=='/')
+      {
+        var res=parseInt(opr1)/parseInt(opr2);
+
+      }
+      
+      document.getElementById('res').value=res;
+    }
+</script>
+</html>
